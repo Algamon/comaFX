@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="coma_db@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="coma_db">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="clowns"/>
+    <schema id="4" parent="1" name="contact"/>
+    <schema id="5" parent="1" name="dallas_toolsdb"/>
+    <schema id="6" parent="1" name="gears_db"/>
+    <schema id="7" parent="1" name="gregs_list"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="movie"/>
+    <schema id="10" parent="1" name="mysql"/>
+    <schema id="11" parent="1" name="my_test"/>
+    <schema id="12" parent="1" name="performance_schema"/>
+    <schema id="13" parent="1" name="sakila"/>
+    <schema id="14" parent="1" name="sys"/>
+    <schema id="15" parent="1" name="world"/>
+    <table id="16" parent="2" name="contact"/>
+    <table id="17" parent="2" name="first_db"/>
+    <table id="18" parent="2" name="rashody"/>
+    <table id="19" parent="2" name="tableconsumption"/>
+    <column id="20" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="21" parent="16" name="email">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="22" parent="16" name="name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="23" parent="16" name="phone">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <index id="24" parent="16" name="UK_gnqwbwwcn7x0m5jlt4158dass">
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="25" parent="16" name="UK_n07fa8c8nqso88ftmqd0t50uh">
+      <ColNames>phone</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="26" parent="16" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="27" parent="16" name="UK_gnqwbwwcn7x0m5jlt4158dass">
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>UK_gnqwbwwcn7x0m5jlt4158dass</UnderlyingIndexName>
+    </key>
+    <key id="28" parent="16" name="UK_n07fa8c8nqso88ftmqd0t50uh">
+      <ColNames>phone</ColNames>
+      <UnderlyingIndexName>UK_n07fa8c8nqso88ftmqd0t50uh</UnderlyingIndexName>
+    </key>
+    <column id="29" parent="17" name="idfirst_db">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="17" name="first_dbcol">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="31" parent="17" name="first_dbcol1">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="32" parent="17" name="first_dbcol2">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="33" parent="17" name="PRIMARY">
+      <ColNames>idfirst_db</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="34" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="35" parent="18" name="date">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="36" parent="18" name="osnovanie">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="37" parent="18" name="rashodi">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="38" parent="18" name="statia">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <index id="39" parent="18" name="UK_lcyeq1nktyj8au08h631sno1e">
+      <ColNames>rashodi</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="40" parent="18" name="UK_lv6trl6jf0saa8khga8tlwrpl">
+      <ColNames>osnovanie</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="41" parent="18" name="UK_t62mfxulsgfg03d1t090kos81">
+      <ColNames>statia</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="42" parent="18" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="43" parent="18" name="UK_lv6trl6jf0saa8khga8tlwrpl">
+      <ColNames>osnovanie</ColNames>
+      <UnderlyingIndexName>UK_lv6trl6jf0saa8khga8tlwrpl</UnderlyingIndexName>
+    </key>
+    <key id="44" parent="18" name="UK_lcyeq1nktyj8au08h631sno1e">
+      <ColNames>rashodi</ColNames>
+      <UnderlyingIndexName>UK_lcyeq1nktyj8au08h631sno1e</UnderlyingIndexName>
+    </key>
+    <key id="45" parent="18" name="UK_t62mfxulsgfg03d1t090kos81">
+      <ColNames>statia</ColNames>
+      <UnderlyingIndexName>UK_t62mfxulsgfg03d1t090kos81</UnderlyingIndexName>
+    </key>
+    <column id="46" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="19" name="dateColumn">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="48" parent="19" name="rashodColumn">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="49" parent="19" name="statiaColumn">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="50" parent="19" name="osnovanieColumn">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="51" parent="19" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="942.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <left>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <TitledPane animated="false" collapsible="false" prefHeight="538.0" prefWidth="200.0" text="Категории">
+               <content>
+                  <ScrollPane prefHeight="478.0" prefWidth="198.0">
+                     <content>
+                        <VBox>
+                           <children>
+                              <TitledPane expanded="false" text="Общее">
+                                 <content>
+                                    <VBox prefWidth="100.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#showFirstDohod" prefHeight="30.0" prefWidth="200.0" text="Доходы" />
+                                          <Button mnemonicParsing="false" onAction="#showFirstRashod" prefHeight="30.0" prefWidth="200.0" text="Расходы" />
+                                          <Button mnemonicParsing="false" onAction="#showFirstThird" prefHeight="30.0" prefWidth="200.0" text="Третье подменю" />
+                                       </children>
+                                    </VBox>
+                                 </content>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TitledPane>
+                              <Button mnemonicParsing="false" onAction="#showFirstTochki" prefHeight="30.0" prefWidth="200.0" text="Точки">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <TitledPane expanded="false" prefWidth="200.0" text="Сотрудники">
+                                 <content>
+                                    <VBox prefWidth="100.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#showFirstSotrudniki" prefHeight="30.0" prefWidth="200.0" text="Сотрудники" />
+                                          <Button mnemonicParsing="false" onAction="#showFirstPlanirovanie" prefHeight="30.0" prefWidth="200.0" text="Планирование" />
+                                          <Button mnemonicParsing="false" onAction="#showFirstOtchet" prefHeight="30.0" prefWidth="200.0" text="Отчёт" />
+                                       </children>
+                                    </VBox>
+                                 </content>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></TitledPane>
+                              <Button mnemonicParsing="false" onAction="#showFirstSklad" prefHeight="30.0" prefWidth="200.0" text="Склад">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <TitledPane expanded="false" prefWidth="200.0" text="Отчеты">
+                                 <content>
+                                    <VBox prefWidth="100.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#showFirstOtchety" prefHeight="30.0" prefWidth="200.0" text="Отчеты" />
+                                          <Button mnemonicParsing="false" onAction="#showFirstPoTochkam" prefHeight="30.0" prefWidth="200.0" text="Отчеты по точкам" />
+                                          <Button mnemonicParsing="false" onAction="#showFirstAnaliz" prefHeight="30.0" prefWidth="200.0" text="Анализ отчетов" />
+                                       </children>
+                                    </VBox>
+                                 </content>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></TitledPane>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TitledPane>
+         </children>
+      </AnchorPane>
+   </left>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Настройки">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Справка">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
