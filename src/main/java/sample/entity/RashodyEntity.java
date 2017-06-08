@@ -1,10 +1,11 @@
-package sample.Entity;
+package sample.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "rashody", schema = "coma_db")
-public class RashodyEntity {
+public class RashodyEntity implements Serializable{
     private long id;
     private String date;
     private String osnovanie;
@@ -20,6 +21,7 @@ public class RashodyEntity {
     }
     public RashodyEntity(){}
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     public long getId() {
         return id;

@@ -5,12 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.metadata.ClassMetadata;
 
 import java.io.IOException;
-import java.util.Map;
 
 public class Main extends Application {
 
@@ -19,28 +15,17 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-
-
-        final Session session = MainHibernate.getSession();
-        try {
-            System.out.println("querying all the managed entities...");
-            final Map metadataMap = session.getSessionFactory().getAllClassMetadata();
-            for (Object key : metadataMap.keySet()) {
-                final ClassMetadata classMetadata = (ClassMetadata) metadataMap.get(key);
-                final String entityName = classMetadata.getEntityName();
-                final Query query = session.createQuery("from " + entityName);
-                System.out.println("executing: " + query.getQueryString());
-                for (Object o : query.list()) {
-                    System.out.println("  " + o);
-                }
-            }
-        } finally {
-            session.close();
-        }
         this.primaryStage=primaryStage;
         this.primaryStage.setTitle("ComaFX");
         primaryStage.setTitle("comaFX");
         showMainItems();
+    }
+
+    @Override
+    public void stop() throws Exception {
+        super.stop();
+        //MainController.session.close();
+        System.exit(0);
     }
 
     private void showMainItems() throws IOException{

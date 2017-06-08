@@ -5,7 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ui.DohodController">
    <top>
       <Label text="Доход" BorderPane.alignment="CENTER">
          <font>
@@ -13,4 +13,14 @@
          </font>
       </Label>
    </top>
+   <center>
+      <TableView fx:id="dohod" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="prihodColumn" prefWidth="175.0" text="Приход" />
+          <TableColumn fx:id="statiaColumn" prefWidth="175.0" text="Статья" />
+          <TableColumn fx:id="sotrudnikColumn"  prefWidth="175.0" text="Сотрудник" />
+        </columns>
+      </TableView>
+   </center>
 </BorderPane>
