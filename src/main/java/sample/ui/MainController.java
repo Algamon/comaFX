@@ -6,14 +6,14 @@ import sample.Main;
 import java.io.IOException;
 
 public class MainController {
-    //public static Session session = MainHibernate.getSession();
-
-    /*@SuppressWarnings("unchecked")
-    @PostConstruct
     @FXML
-    private void initialize(){
-        session.beginTransaction();
-    }*/
+    private void closeAction(){
+        System.exit(0);
+    }
+    @FXML
+    private void aboutAction(){
+
+    }
     @FXML
     public void showFirstDohod()throws IOException {
         Main.showDohod();

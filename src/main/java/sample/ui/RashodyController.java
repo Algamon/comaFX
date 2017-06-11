@@ -54,20 +54,19 @@ public class RashodyController {
     // подготавливаем данные для таблицы
     // вы можете получать их с базы данных
     private void initData() {
-        System.out.println("initData");
-        /*;
-        //session.save(rash);
-
-        System.out.println(rash.getOsnovanie());
-        session.getTransaction().commit();
-        session.close();*/
-        //session.beginTransaction();
         Session session = MainHibernate.getSession();
         session.beginTransaction();
-        RashodyEntity rash = (RashodyEntity)session.get(RashodyEntity.class,(long)3);
-        RashodyEntity ras_one = new RashodyEntity(rash.getId(),rash.getDate(),rash.getRashodi(),rash.getStatia(),rash.getOsnovanie());
+        Object check;
+        long j = 1;
+        for(;;){
+            check = session.get(RashodyEntity.class,j);
+            if (check==null) break;
+            RashodyEntity rash = (RashodyEntity)session.get(RashodyEntity.class,j);
+            RashodyEntity ras_one = new RashodyEntity(rash.getId(),rash.getDate(),rash.getRashodi(),rash.getStatia(),rash.getOsnovanie());
+            usersData.add(ras_one);
+            j++;
+        }
         session.close();
-        usersData.add(ras_one);
 
     }
 

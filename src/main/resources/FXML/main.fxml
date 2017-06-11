@@ -15,13 +15,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="942.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ui.MainController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ui.MainController">
    <left>
       <AnchorPane BorderPane.alignment="CENTER">
          <children>
-            <TitledPane animated="false" collapsible="false" prefHeight="538.0" prefWidth="200.0" text="Категории">
+            <TitledPane animated="false" collapsible="false" prefHeight="675.0" prefWidth="200.0" text="Категории">
                <content>
-                  <ScrollPane prefHeight="478.0" prefWidth="198.0">
+                  <ScrollPane prefHeight="640.0" prefWidth="198.0">
                      <content>
                         <VBox>
                            <children>
@@ -90,14 +90,14 @@
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
-          <Menu mnemonicParsing="false" text="Настройки">
+          <Menu mnemonicParsing="false" text="Файл">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
+              <MenuItem fx:id="close" mnemonicParsing="false" onAction="#closeAction" text="Закрыть" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Справка">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem fx:id="about" mnemonicParsing="false" onAction="#aboutAction" text="О программе" />
             </items>
           </Menu>
         </menus>
